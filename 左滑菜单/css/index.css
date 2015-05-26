@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+
+/*-----------------------侧滑菜单-------------------------*/
+
+#slidemenu{
+	background-color:#066;
+}
+
+/*-----------------------页面主体内容-------------------------*/
+
+#container {
+	background-color: #CCC;
+	text-align: center;
+}
+#toparea {
+	background-color: #666;
+	height: 125px;
+}
+#middlearea {
+	height: 500px;
+}
+#leftarea {
+	float: left;
+	height: 100%;
+	width: 25%;
+	background-color: #069;
+}
+#rightarea {
+	float: left;
+	height: 100%;
+	width: 75%;
+	background-color:#0CF;
+}
+#bottomarea{
+	background-color:#69F;
+	height:125px;
+}

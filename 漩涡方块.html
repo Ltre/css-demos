@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	/* 方案一
+	#toptop{
+		height:200px;
+		width:400px;
+		float:left;
+	}
+	#rightright{
+		height:400px;
+		width:200px;
+		float:left;
+	}	
+	#bottombottom{
+		height:200px;
+		width:400px;
+		float:left;
+	}	
+	#leftleft{
+		height:400px;
+		width:200px;
+		margin-top:-200px;
+		clear:both;
+		float:left;
+	}
+	*/
+
+	/* 方案二
+	#toptop,#bottombottom{
+		height:200px;
+		width:400px;
+	}
+	#rightright,#leftleft{
+		height:400px;
+		width:200px;
+	}
+	#toptop,#rightright {
+		float:left;
+	}
+	#leftleft{
+		margin-top:-200px;
+		clear:both;
+		float:left;
+	}
+	#bottombottom{
+		float:left;
+	}
+	*/
+	
+	/* 方案三（方案二简化，并上色） */
+	#toptop,#bottombottom{
+		height:200px;
+		width:400px;
+		line-height:200px;/*非必需属性*/
+	}
+	#rightright,#leftleft{
+		height:400px;
+		width:200px;
+		line-height:400px;/*非必需属性*/
+	}
+	#toptop,#rightright,#bottombottom,#leftleft,#container{
+		float:left;
+		text-align:center;/*非必需属性*/
+		font-size:50px;/*非必需属性*/
+		font-family:微软雅黑;/*非必需属性*/
+	}
+	#leftleft{
+		margin-top:-200px;
+		clear:both;
+		background-color:#CCC;/*非必需属性*/
+	}
+	/* 上色 */
+ 	#toptop{
+		background-color:#09F;/*非必需属性*/
+	}
+	#rightright{
+		background-color:#3C6;/*非必需属性*/
+	}
+	#bottombottom{
+		background-color:#66F;/*非必需属性*/
+	}
+	#container{
+		width:600px;
+		background-color:#555;/*非必需属性*/
+	}
+</style>
+</head>
+
+<body>
+<div id="container">
+    <div id="toptop">Top</div>
+    <div id="rightright">Right</div>
+    <div id="leftleft">Bottom</div>
+    <div id="bottombottom">Left</div>
+</div>
+
+
+</body>
+</html>
