@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>修复IOS兑换错误订单</title>
+<link rel="stylesheet" href="static/fixsomething/iege.css">
+</head>
+
+<body>
+
+<div id="pack">
+	<div id="title">修复IOS兑换错误订单</div>
+    <form>
+    <div id="fix-form">
+    	<div class="space-line15"></div>
+    	<div class="form-line">
+        	<label for="ticket">票&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;据</label>
+            <input id="ticket" name="ticket" class="form-text">
+        </div>
+    	<div class="form-line">
+        	<label for="dw_pass">多玩通行证</label>
+        	<input id="dw_pass" name="dw_pass" class="form-text form-field">
+        </div>
+    	<div class="space-line5"></div>
+    </div>
+    <div id="bottom">
+    	<div class="space-line10"></div>
+    	<div id="fix-submit" class="circle">□</div>
+    </div>
+    </form>
+</div>
+
+
+<script type="text/javascript">
+
+/** 注意，此段脚本因缺少seajs资源，故会产生错误 */
+seajs.use(['/jquery.js', '$'], function(Ltre, $) {
+    //收集值，返回json。ids是id属性的数组，可选，不传值则从.form-field控件收集
+    var collval = function(ids){
+        var j = {};
+        if (ids && ids.length > 0) {
+            for (var i in ids) {
+                var id = ids[i];
+                j[id] = $('#' + id).val();
+            }
+        } else {
+            $('.form-field').each(function(i, e){
+                var id = $(e).attr('id');
+                j[id] = $('#' + id).val();
+            });
+        }
+        return j;
+    };	
+});
+
+</script>
+
+
+</body>
+</html>

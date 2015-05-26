@@ -1,0 +1,26 @@
+<style type=text/css>input {text-align:right}</style>
+<form name=form1 onSubmit="return comp();">
+<input type=text name=a value='1'> x + <input type=text name=b value='1'> y = <input type=text name=e value='9'> <br>
+<input type=text name=c value='1'> x + <input type=text name=d value='-1'> y = <input type=text name=f value='3'> <br>
+<input type=submit value='Çó½â'> <br>
+x=<input type=text name=x> <br>
+y=<input type=text name=y> 
+</form>
+<script language="JavaScript">
+function comp(){ 
+a=parseFloat(document.form1.a.value);
+b=parseFloat(document.form1.b.value);
+c=parseFloat(document.form1.c.value);
+d=parseFloat(document.form1.d.value);
+e=parseFloat(document.form1.e.value);
+f=parseFloat(document.form1.f.value);
+x=document.form1.x;
+y=document.form1.y;
+vy=(e*c-a*f)/(b*c-a*d);
+vx=(e-b*vy)/a;
+y.value=vy;
+x.value=vx;
+return false;
+} 
+</script>
+

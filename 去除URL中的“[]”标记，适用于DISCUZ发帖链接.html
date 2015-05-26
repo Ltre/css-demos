@@ -1,0 +1,147 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+        <meta charset="UTF-8">
+
+        <title>5B5D</title>
+
+        <style type="text/css">
+
+        ul{
+
+                list-style-type: none;
+
+        }
+
+        .right{
+
+                float: right;
+
+                width:500px;
+
+                margin-right: 10px;
+
+        }
+
+        </style>
+
+        <script src="http://www.sise.com.cn/js/jquery-latest.js"></script>
+
+        <!-- <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+
+        <!-- 上方两个js只要有一个能用就可以，主要考虑在校的流量问题以及在校外访问www.sise.com.cn的速度问题，通常情况下不用管，出了什么问题的话把两个元素换下位置就行了 -->
+
+        <script type="text/javascript">
+
+        $().ready(function(){
+
+                document.onkeydown = hotkey;
+
+                $("#replace").bind("click",replace);
+
+                $("#deleteabove").bind("click",function(){
+
+                        $("#url").val("");
+
+                });
+
+                $("#deleteunder").bind("click",function(){
+
+                        $("#replaceurl").val("");
+
+                });
+
+                function replace(){
+
+                        var str = $("#url").val();
+
+                        str = str.replace(/\[/g,"%5B");
+
+                        str = str.replace(/\]/g,"%5D");
+
+                        var strs = new Array();
+
+                        strs = str.split("\n");
+
+                        var len = strs.length;
+
+                        var text = "";
+
+                        for(var i = 0;i < len;i++){
+
+                                text = text + strs[i] + "\r\n";
+
+                        }
+
+                        $("#replaceurl").val(text);
+
+                }
+
+                function hotkey(){
+
+                        var key = window.event.keyCode;
+
+                        if(key == 13 && event.ctrlKey){
+
+                                replace();
+
+                        }
+
+                }
+
+        });
+
+        </script>
+
+</head>
+
+<body>
+
+        <div class="right">
+
+                <h3>使用说明：</h3>
+
+                <p>本页用于解决在论坛（包括discuz!和phpwind等使用方括号代替尖括号的论坛）使用带有方括号"[]"的链接的时候，方括号被认为是特殊标记，然而因为找不到对应标记而原样输出的问题。</p>
+
+                <p>上方文本域，用于输入（通常都是粘贴就是了）带有方括号的字符串，ctrl+enter = 点击 替换 按钮</p>
+
+                <p>下方文本域，用于输出对上方文本域的处理结果,复制之后可以直接使用</p>
+
+                <h3>原理：</h3>
+
+                <p>把链接中的方括号用url编码的对应编码代替，说白了就是用记事本替换也可以解决的问题，只是我懒得替换两次</p>
+
+        </div>
+
+        <ul>
+
+                <li>
+
+                        <textarea id="url" cols="60" rows="10"></textarea>
+
+                </li>
+
+                <li>
+
+                        <button id="replace">替换</button>
+
+                        <button id="deleteabove">清除上方</button>
+
+                        <button id="deleteunder">清除下方</button>
+
+                </li>
+
+                <li>
+
+                        <textarea id="replaceurl" cols="60" rows="10"></textarea>
+
+                </li>
+
+        </ul>
+
+</body>
+
+</html>

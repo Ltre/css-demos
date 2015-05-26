@@ -1,0 +1,97 @@
+/* ******************* 以下为全局或通用 ******************* */
+
+/* 全局容器 */
+#pack{
+	width: 465px;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 55px;
+	font-family: 微软雅黑;
+	font-weight: bold;
+}
+
+/* 顶部 */
+#title{
+	border-radius: 16px 16px 0px 0px;
+	color: white;
+	background-color: black;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 28px;
+	font-variant: normal;
+}
+
+/* 表单全局 */
+#fix-form{
+	background-color: rgba(103,182,227,1.00);
+}
+
+.form-line{
+	margin-bottom: 10px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-line>label{
+	width: 100px;
+	display: inline-block;
+	text-align: right;
+	margin-right: 6px;
+}
+
+.form-text{
+	height: 23px;
+	width: 68%;
+	line-height: 23px;
+	font-size: 16px;
+	text-align: center;
+	border-color: rgba(0,0,0,1.00);
+	border-width: 0px;
+	-webkit-box-shadow: inset 0px 0px 0px 0px;
+	box-shadow: inset 0px 0px 0px 0px;
+}
+
+#bottom{
+	border-radius: 0px 0px 16px 16px;
+	background-color: black;
+	color: white;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+}
+
+/* 圆形按钮 */
+.circle{
+	height: 45px;
+	width: 45px;
+	line-height: 42px;
+	font-size: 25px;
+	background-color: rgba(40,40,40,1.00);
+	border-radius: 43px;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	cursor: pointer;
+}
+
+/* 空行 */
+.space-line5{
+	height: 5px;
+}
+.space-line10{
+	height: 10px;
+}
+.space-line15{
+	height: 15px;
+}
+
+
+/* ******************* 以下为特例 ******************* */
+
+/*票据*/
+#ticket{
+}
